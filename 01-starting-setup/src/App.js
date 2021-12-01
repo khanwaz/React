@@ -5,7 +5,7 @@ import NewExpense from "./components/NewExpense/NewExpense";
 const DUMMY_EXPENSES = [
   {
     id: "e1",
-    title: "Toilet Paper",
+    title: "To-let ",
     amount: 94.12,
     date: new Date(2021, 7, 14),
   },
@@ -29,7 +29,9 @@ function App() {
 
   const addExpenseHandler = (expense) => {
     setExpenses((prevExpenses) => {
+      console.log(expenses);
       return [expense, ...prevExpenses];
+      
     });
   };
 
