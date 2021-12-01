@@ -1,11 +1,12 @@
-import './App.css';
-import FirstComponent from './components/FirstComponent'; 
-
+import "./App.css";
+import FirstComponent from "./components/FirstComponent";
+import Button from "react-bootstrap/Button";
 function App() {
   return (
-    <div>
+    <div className="App">
       <h2>This is the first app done by aleena's dad.</h2>
       <FirstComponent></FirstComponent>
+      <Button variant="dark">Click_ME</Button>
     </div>
   );
 }
