@@ -1,11 +1,12 @@
-import FirstComponent from "./components/FirstComponent";
-import Button from "react-bootstrap/Button";
+import DetailsPage from "./components/Details/DetailsPage";
+import LoginPage from "./components/Login/Loginpage";
+
 function App() {
   return (
     <div>
-      <h2>This is the first app done by aleena's dad.</h2>
-      <FirstComponent></FirstComponent>
-      <Button variant="dark">Click_ME</Button>
+      <h1>This is the app component</h1>
+      <LoginPage></LoginPage>
+      <DetailsPage></DetailsPage>
     </div>
   );
 }
