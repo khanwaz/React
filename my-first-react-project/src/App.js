@@ -1,4 +1,3 @@
-import "./App.css";
 import FirstComponent from "./components/FirstComponent";
 import Button from "react-bootstrap/Button";
 function App() {
