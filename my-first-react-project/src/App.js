@@ -6,6 +6,7 @@ function App() {
     <div>
       <h1>This is the app component</h1>
       <LoginPage></LoginPage>
+      <hr></hr>
       <DetailsPage></DetailsPage>
     </div>
   );
