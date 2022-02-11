@@ -1,0 +1,9 @@
+.container {
+  border: 0.3rem solid #ececec;
+}
+.form {
+  padding: 1%;
+  background-color: #4edbc8;
+  text-justify: auto;
+  
+}
