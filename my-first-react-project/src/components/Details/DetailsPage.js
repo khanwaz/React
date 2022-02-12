@@ -12,6 +12,12 @@ function DetailsPage() {
     <div>
       <Container className="container">
         <Form className="form">
+          <Row className="mb-3">
+            <Col sm={4}>
+              <h3>Details Page</h3>
+            </Col>
+          </Row>
+
           <Row className="mb-4">
             <Col sm={2}>
               <Form.Group as={Col}>

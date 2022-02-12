@@ -3,7 +3,8 @@
 }
 .form {
   padding: 1%;
-  background-color: #4edbc8;
+  /* background-color: #d0d49a; */
+  background-image:url('../Img/tileback.png') ;
   text-justify: auto;
   
 }

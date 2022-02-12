@@ -9,9 +9,14 @@ import "./LoginPage.css";
 function LoginPage() {
   return (
     <div>
-      <h1>Login Page</h1>
       <Container className="container">
         <Form className="form">
+          <Row className="mb-3">
+            <Col sm={4}>
+              <h3>Login Page</h3>
+            </Col>
+          </Row>
+
           <Row className="mb-3">
             <Col sm={4}>
               <Form.Group className="mb-3" controlId="formBasicEmail">
@@ -21,14 +26,25 @@ function LoginPage() {
                   We'll never share your email with anyone else.
                 </Form.Text>
               </Form.Group>
-
+            </Col>
+            <Col sm={4}>
               <Form.Group className="mb-3" controlId="formBasicPassword">
                 <Form.Label>Password</Form.Label>
                 <Form.Control type="password" placeholder="Password" />
               </Form.Group>
+            </Col>
+          </Row>
 
+          <Row className="mb-3">
+            <Col sm={2}>
               <Button variant="primary" type="submit">
-                Submit
+                Login
+              </Button>
+            </Col>
+
+            <Col sm={2}>
+              <Button variant="primary" type="submit">
+                Register
               </Button>
             </Col>
           </Row>
