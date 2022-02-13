@@ -4,10 +4,22 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/esm/Col";
 import Container from "react-bootstrap/Container";
 import { Dropdown } from "react-bootstrap";
+import DatePicker from "react-datepicker";
+import Multiselect from "multiselect-react-dropdown";
+import React, { useState } from "react";
 
+import "react-datepicker/dist/react-datepicker.css";
 import "./DetailsPage.css";
 
 function DetailsPage() {
+  const [selectedDate, setSelectedDate] = useState(null);
+  const [occupation, setOccupation] = useState([
+    "Doctor",
+    "Engineer",
+    "IAS",
+    "IPS",
+  ]);
+
   return (
     <div>
       <Container className="container">
@@ -37,7 +49,18 @@ function DetailsPage() {
             </Col>
             <Col sm={3}>
               <Form.Group as={Col} controlId="formGridDOB">
-                <Form.Control placeholder="Enter DOB" />
+                <DatePicker
+                  selected={selectedDate}
+                  onChange={(date) => setSelectedDate(date)}
+                  dateFormat="dd/MM/yyyy"
+                  maxDate={new Date()}
+                  isClearable
+                  showYearDropdown
+                  showMonthDropdown
+                  scrollableMonthYearDropdown
+                  placeholderText="Enter your DOB"
+                  disabledKeyboardNavigation
+                />
               </Form.Group>
             </Col>
           </Row>
@@ -65,7 +88,17 @@ function DetailsPage() {
             </Col>
             <Col sm={3}>
               <Form.Group as={Col} controlId="formGridOccupation">
-                <Form.Control type="text" placeholder="Enter Your Occupation" />
+                <Multiselect
+                  isObject={false}
+                  onRemove={(event) => {
+                    console.log(event);
+                  }}
+                  onSelect={(event) => {
+                    console.log(event);
+                  }}
+                  options={occupation}
+                  placeholder="Enter Your Occupation"
+                />
               </Form.Group>
             </Col>
           </Row>
